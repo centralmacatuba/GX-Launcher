@@ -183,7 +183,7 @@ function isWispEnabled() {
 
 // Returns the configured WISP URL, or the default
 function getWispUrl() {
-    return getCookie('wispUrl') || 'wss://anura.pro/';
+    return getCookie('wispUrl') || 'wss://wisp.eaglercraft.centralmacatuba.qzz.io/';
 }
 
 // Injects the wispcraft bundle script into a raw HTML string
@@ -240,6 +240,7 @@ const GX_SERVERS = [
     { name: "Dumbshit Survival X",             addr: "wss://mc.dssx.uk" },
     { name: "Mytheria MC",                     addr: "wss://play.mytheriamc.net" },
     { name: "CMC",                             addr: "wss://cmc.tf" },
+    { name: "Central Macatuba - Minecraft",    addr: "wss://eaglercraft.centralmacatuba.qzz.io" },
 ];
 
 function injectServersIntoHtml(html) {
@@ -279,6 +280,7 @@ function injectServersIntoHtml(html) {
 const GX_SOURCES = [
     'https://raw.githack.com/XENOTECH-X/GX-Launcher/main',
     'https://raw.githack.com/GX-Launcher/GX-Launcher.github.io/main'
+    'https://raw.githack.com/centralmacatuba/GX-Launcher.github.io/main'
     // add more fork URLs here as you create them, e.g.:
     // 'https://raw.githack.com/SOME-OTHER-ACCOUNT/GX-Launcher/main',
 ];
@@ -466,7 +468,7 @@ async function playGame() {
     } else if (method === 'data-uri') {
         try {
             const folder  = _selectedVersion.split('/').map(encodeURIComponent).join('/');
-            const cdnBase = 'https://raw.githack.com/xXJ0NXx/GX-Launcher/main/' + folder + '/';
+            const cdnBase = 'https://raw.githack.com/centralmacatuba/GX-Launcher/main/' + folder + '/';
             const gameUrl = cdnBase + 'index.html';
 
             const loaderHtml = `<!DOCTYPE html>
